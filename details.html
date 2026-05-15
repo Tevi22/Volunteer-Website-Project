@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Scheduler | Event Details</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Navigation Container -->
+        <div class="container">
+            <nav>
+                <div class="nav-top">
+                    <strong>Volunteer Scheduler</strong>
+
+                    <!-- Hamburger Icon -->
+                    <div class="menu-toggle" role="button" aria-label="Toggle navigation menu">☰</div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="register.html">Register</a>
+                    <a href="schedule.html">Schedule</a>
+                    <a href="details.html">Details</a>
+                    <a href="#">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Event Details Section -->
+    <section class="section container">
+        <h1>Volunteer Event Details</h1>
+
+        <p><strong>Date:</strong> July 20, 2026</p>
+        <p><strong>Time:</strong> 9:00 AM – 2:00 PM</p>
+        <p><strong>Location:</strong> Community Park, Indianapolis</p>
+
+        <p>
+            Join us for a community volunteer event focused on improving local spaces and supporting neighborhood initiatives. Volunteers will assist with cleanup, organization, and coordination activities throughout the day.
+        </p>
+
+        <!-- Multimedia Item -->
+        <div class="card">
+            <img src="./image/pexels-gustavo-fring-7156162 (1).jpg" alt="Volunteers working together">
+        </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section class="section container">
+        <h2>Event Schedule</h2>
+
+        <!-- Google Calendar Widget -->
+        <!-- Replace the src link below with your actual Google Calendar embed link -->
+        <iframe src="https://calendar.google.com/calendar/embed?src=bd6b6a4e13456185c140c0d9f5bf5e56498a1194f7417adf5b10a54cefa2dd7a%40group.calendar.google.com&ctz=America%2FIndiana%2FIndianapolis" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </section>
+
+    <!-- Back to Homepage -->
+    <section class="section container">
+        <a href="index.html">← Back to Homepage</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>
+                <a href="#">Contact</a> |
+                <a href="#">Social Media</a>
+            </p>
+            <p>&copy; 2023 Volunteer Scheduler. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JS Module -->
+    <script type="module">
+        import { initNavToggle } from "./js/nav.js"; initNavToggle();
+    </script>
+
+</body>
+
+</html>
