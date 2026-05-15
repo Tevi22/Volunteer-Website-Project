@@ -1,0 +1,227 @@
+/* =========================
+   DESIGN SYSTEM VARIABLES
+========================= */
+
+:root {
+    --color-primary: #333;
+    --color-secondary: #f5f5f5;
+    --color-border: #ccc;
+    --color-text: #222;
+    --font-main: Arial, sans-serif;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+    --radius: 6px;
+    --cta: #007BFF;
+    --cta-hover: #0056b3;
+}
+
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+body {
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    color: var(--color-text);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER & NAVIGATION
+========================= */
+
+header {
+    border-bottom: 1px solid var(--color-border);
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav a {
+    margin-left: var(--spacing-md);
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.nav-links {
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* Hide hamburger by default (desktop) */
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Hero Section Styling */
+
+.hero {
+    background: #e9ecef;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section {
+    padding: var(--spacing-lg) 0;
+    margin-bottom: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+#about-section h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card {
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-md);
+    border-radius: var(--radius);
+    background: #fff;
+}
+
+.card img {
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+button {
+    background-color: var(--cta);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--cta-hover);
+}
+
+button:focus,
+.nav-links a:focus {
+    outline: 2px solid var(--cta);
+}
+
+
+/* =========================
+   FOOTER STYLING
+========================= */
+
+footer {
+    border-top: 1px solid var(--color-border);
+    padding: var(--spacing-md);
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   Mobile Responsiveness
+========================= */
+
+@media (max-width: 768px) {
+    /* Stack layout */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    /* Navigation */
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    /* Top row (logo + hamburger) */
+    .nav-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+    .nav-top strong {
+        margin: 0;
+        padding: 0;
+    }
+    /* Show hamburger */
+    .menu-toggle {
+        display: block;
+    }
+    /* Hide links initially */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        box-sizing: border-box;
+        align-items: flex-start;
+        padding: 0;
+        margin: 0;
+    }
+    /* Show when active */
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links a {
+        padding: 12px 0;
+        margin: 0;
+        display: block;
+        text-align: left;
+        width: 100%;
+        border-bottom: 1px solid var(--color-border);
+    }
+    /* Hero */
+    .hero {
+        padding: 40px 15px;
+    }
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    /* Content */
+    .section {
+        text-align: center;
+    }
+    #about-section {
+        text-align: center;
+    }
+    /* Button spacing */
+    button {
+        margin-top: 10px;
+    }
+    /* Container width */
+    .container {
+        width: 95%;
+    }
+}
