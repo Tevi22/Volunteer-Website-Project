@@ -134,7 +134,7 @@ nav a.active {
 
 .hero-subtext {
     font-size: 18px;
-    color: #666;
+    color: var(--color-primary);
     margin-top: 10px;
     font-family: 'Roboto', sans-serif;
 }
