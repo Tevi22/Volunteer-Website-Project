@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Scheduler | Registration</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <!-- Registration form container -->
+    <div class="form-container">
+
+        <h1>Volunteer Event Registration</h1>
+
+        <!-- Registration Form -->
+        <form action="#" method="post">
+
+            <!-- First Name -->
+            <label for="first-name">First Name</label>
+
+            <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+
+            <!-- Last Name -->
+            <label for="last-name">Last Name</label>
+
+            <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+
+            <!-- Email Address -->
+            <label for="email">Email Address</label>
+
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number</label>
+
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+            <!-- Event Selection -->
+            <label for="event">Select Event</label>
+
+            <select id="event" name="event" required>
+
+                <option value="">-- Choose an Event --</option>
+
+                <option value="community-cleanup">
+                    Community Cleanup
+                </option>
+
+                <option value="food-drive">
+                    Food Drive
+                </option>
+
+                <option value="park-restoration">
+                    Park Restoration
+                </option>
+
+            </select>
+
+            <!-- Additional Comments -->
+            <label for="comments">Additional Comments</label>
+
+            <textarea id="comments" name="comments" placeholder="Enter any additional information here..."></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">
+                Register Now
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
