@@ -235,6 +235,77 @@ button:focus,
 
 
 /* =========================
+   Registration Form Styling
+========================= */
+
+
+/* Main form container */
+
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Heading styling */
+
+h1 {
+    color: var(--branding);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+/* Label styling */
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+
+/* Input and select styling */
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+/* Textarea resize behavior */
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-container button {
+    display: block;
+    margin: 0 auto;
+    background-color: var(--cta);
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+/* =========================
    FOOTER STYLING
 ========================= */
 
@@ -364,5 +435,34 @@ footer a:hover {
         width: 100%;
         height: 450px;
         border-radius: 10px;
+    }
+    /* Form adjustments */
+    /* Form container */
+    .form-container {
+        width: 100%;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    /* Form title */
+    .form-container h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    /* Labels */
+    label {
+        font-size: 1rem;
+    }
+    /* Inputs and textarea */
+    input,
+    select,
+    textarea {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+    /* Textarea height */
+    textarea {
+        min-height: 120px;
     }
 }

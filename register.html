@@ -8,6 +8,27 @@
 </head>
 
 <body>
+    <!-- Header -->
+    <header>
+        <!-- Navigation Container -->
+        <div class="container">
+            <nav>
+                <div class="nav-top">
+                    <strong>Volunteer Scheduler</strong>
+                    <!-- Hamburger Icon -->
+                    <div class="menu-toggle" role="button" aria-label="Toggle navigation menu">☰</div>
+                </div>
+                <!-- Navigation Links -->
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="register.html">Register</a>
+                    <a href="schedule.html">Schedule</a>
+                    <a href="details.html">Details</a>
+                    <a href="#">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
 
     <!-- Registration form container -->
     <div class="form-container">
@@ -71,6 +92,23 @@
         </form>
 
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Footer Content -->
+            <!--will fix these links later-->
+            <p>
+                <a href="#">Contact</a> |
+                <a href="#">Social Media</a>
+            </p>
+            <p>&copy; 2026 Volunteer Scheduler. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { initNavToggle } from "./js/nav.js"; initNavToggle();
+    </script>
 
 </body>
 
