@@ -34,7 +34,7 @@ body {
     margin: 0;
     padding: 0;
     color: var(--color-text);
-    background: linear-gradient( rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('../image/volunteer-bg.jpg');
+    background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('../image/volunteer-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -57,6 +57,10 @@ body {
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+main {
+    flex: 1;
 }
 
 h1 {
@@ -94,6 +98,9 @@ header {
     padding: 10px 0;
 }
 
+
+/* Navigation Links */
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -104,20 +111,54 @@ nav {
 
 nav a {
     margin-left: var(--spacing-md);
-    text-decoration: none;
     color: var(--color-secondary);
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
 }
 
 .nav-links {
     transition: all 0.3s ease;
 }
 
+
+/* Hover Effect */
+
 .nav-links a:hover {
     color: var(--color-primary);
+    opacity: 0.85;
 }
 
-nav a.active {
-    border-bottom: 2px solid white;
+
+/* Active Link */
+
+.nav-links a.active {
+    font-weight: 600;
+}
+
+
+/* Underline Base */
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+
+/* Hover + Active Underline */
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
 }
 
 
@@ -238,7 +279,13 @@ button:focus,
 }
 
 #event-calendar {
-    margin-top: 20px;
+    background: white;
+    border-radius: 16px;
+    padding-bottom: 3rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    border-right: 5px solid var(--branding);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -249,15 +296,23 @@ button:focus,
     margin-bottom: 15px;
 }
 
+.schedule-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 2rem 0 2rem;
+}
+
 
 /* =========================
-   Registration Form Styling
+   Registration Form & Contact Form Styling
 ========================= */
 
 
 /* Main form container */
 
-.form-container {
+.form-container,
+.contact-section {
     width: 100%;
     max-width: 500px;
     margin: 20px auto;
@@ -267,7 +322,8 @@ button:focus,
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-container:hover {
+.form-container:hover,
+.contact-section:hover {
     transform: translateY(-3px);
     transition: 0.3s ease;
 }
@@ -275,10 +331,17 @@ button:focus,
 
 /* Heading styling */
 
-h1 {
-    color: var(--branding);
+.form-container h1,
+.contact-section h1 {
     text-align: center;
-    margin-bottom: 25px;
+}
+
+.contact-section p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: var(--font-subheading);
+    color: var(--color-text);
 }
 
 
@@ -312,7 +375,8 @@ textarea {
     min-height: 100px;
 }
 
-.form-container button {
+.form-container button,
+.contact-section button {
     display: block;
     margin: 0 auto;
     background-color: var(--cta);
@@ -323,6 +387,24 @@ textarea {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+/* =========================
+   Confirmation Page Styling
+========================= */
+
+.confirmation-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.confirmation-content .btn {
+    margin-top: 1.5rem;
 }
 
 
@@ -459,13 +541,15 @@ footer a:hover {
     }
     /* Form adjustments */
     /* Form container */
-    .form-container {
+    .form-container,
+    .contact-section {
         width: 100%;
         padding: 20px;
         margin-top: 20px;
     }
     /* Form title */
-    .form-container h1 {
+    .form-container h1,
+    .contact-section h1 {
         font-size: 2rem;
         text-align: center;
         margin-bottom: 20px;

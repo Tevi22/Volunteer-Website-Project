@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunteer Scheduler | Event Details</title>
+    <title>Volunteer Scheduler | Schedule Details</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -34,8 +34,7 @@
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="register.html">Register</a>
-                    <a href="schedule.html">Schedule</a>
-                    <a href="schedule_details.html">Schedule Details</a>
+                    <a href="schedule_details.html" class="active">Schedule Details</a>
                     <a href="contact.html">Contact</a>
                 </div>
             </nav>
@@ -59,7 +58,7 @@
 
         <!-- Multimedia Item -->
         <div class="card">
-            <img src="./image/pexels-gustavo-fring-7156162 (1).jpg" alt="Volunteers working together">
+            <img src="./image/pexels-gustavo-fring-7156162 (1).jpg" alt="Volunteers organizing supplies at a community event">
         </div>
     </section>
 
@@ -73,9 +72,11 @@
     </section>
 
     <!-- Back to Homepage -->
-    <section class="section container">
-        <a href="index.html">← Back to Homepage</a>
-    </section>
+    <div class="schedule-actions">
+        <button onclick="window.location.href='index.html'" class="btn" aria-label="Back to homepage">
+                Back to Homepage
+            </button>
+    </div>
 
     <!-- Footer -->
     <footer>
