@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Scheduler | Home</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Navigation Container -->
+        <div class="container">
+            <nav>
+                <div class="nav-top">
+                    <strong>Volunteer Scheduler</strong>
+                    <!-- Hamburger Icon -->
+                    <div class="menu-toggle" role="button" aria-label="Toggle navigation menu">☰</div>
+                </div>
+                <!-- Navigation Links -->
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="register.html">Register</a>
+                    <a href="schedule_details.html">Schedule Details</a>
+                    <a href="about.html" class="active">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!--About Section-->
+    <main>
+        <section class="about container">
+            <!-- About the Platform Card -->
+            <div class="about-card">
+                <h1>About the Platform</h1>
+                <p class="about-subheading">
+                    This website was created to provide an accessible and responsive volunteer event registration experience. The goal is to create a clean and easy-to-use platform where users can explore event details, sign up for activities, and stay engaged with community
+                    initiatives.
+                </p>
+            </div>
+
+            <div id="about-items">
+                <!-- Technologies Used Card -->
+                <div class="about-card">
+                    <h2>Technologies Used</h2>
+
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Responsive Web Design</li>
+                        <li>Accessibility Best Practices</li>
+                        <li>Google Calendar Integration (Planned)</li>
+                        <li>PHP & MySQL (Future Enhancement)
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Skills Demonstrated Card -->
+                <div class="about-card">
+                    <h2>Skills Demonstrated</h2>
+
+                    <ul>
+                        <li>Semantic HTML Structure</li>
+                        <li>Responsive Layout Design</li>
+                        <li>Flexbox and Grid Layouts</li>
+                        <li>Form Design and Validation</li>
+                        <li>Navigation Design</li>
+                        <li>Accessibility and ARIA Labels</li>
+                        <li>Mobile-First Development</li>
+                    </ul>
+                </div>
+
+                <!-- Future Enhancements Card -->
+                <div class="about-card">
+                    <h2>Future Enhancements</h2>
+
+                    <ul>
+                        <li>User Login and Authentication</li>
+                        <li>Volunteer Dashboard</li>
+                        <li>Admin Event Management</li>
+                        <li>Database Integration</li>
+                        <li>Email Confirmation System</li>
+                        <li>Google Calendar Synchronization</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Footer Content -->
+            <p>
+                <a href="about.html">About</a> |
+                <a href="contact.html">Contact</a> |
+                <a href="#">Social Media</a>
+            </p>
+            <p>&copy; 2026 Volunteer Scheduler. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { initNavToggle } from "./js/nav.js"; initNavToggle();
+    </script>
+</body>
+
+</html>
