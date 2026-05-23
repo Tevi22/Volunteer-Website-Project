@@ -205,6 +205,8 @@ nav a {
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border-left: 5px solid var(--branding);
+    border-right: 5px solid var(--branding);
 }
 
 #about-section p+p {
@@ -260,6 +262,7 @@ button:focus,
     flex-direction: row;
     align-items: center;
     border-left: 5px solid var(--branding);
+    border-right: 5px solid var(--branding);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
     background: #ffffff;
@@ -285,6 +288,7 @@ button:focus,
     max-width: 1200px;
     margin: 3rem auto;
     border-right: 5px solid var(--branding);
+    border-left: 5px solid var(--branding);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
@@ -319,6 +323,8 @@ button:focus,
     background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
+    border-right: 5px solid var(--branding);
+    border-left: 5px solid var(--branding);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -405,6 +411,39 @@ textarea {
 
 .confirmation-content .btn {
     margin-top: 1.5rem;
+}
+
+
+/* =========================
+   About Section Styling
+========================= */
+
+.about-card h1,
+.about-subheading {
+    text-align: center;
+}
+
+.about-subheading {
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--font-subheading);
+}
+
+.about {
+    width: 100%;
+    margin-top: 40px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid var(--branding);
+    border-right: 5px solid var(--branding);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#about-items {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
 }
 
 
@@ -569,5 +608,10 @@ footer a:hover {
     /* Textarea height */
     textarea {
         min-height: 120px;
+    }
+    /* About Page */
+    #about-items {
+        flex-direction: column;
+        gap: 20px;
     }
 }
